@@ -9,7 +9,7 @@
 #' @param bg.lastframe 2nd frame for background (end of window)
 #' @param sig.firstframe signal onset
 #' @param sig.lastframe signal offset
-#' @param wa calc "width @" xx*extremum, needs 2 arguments, e.g. width when 0.2 of peakmax is reached to when peak falls to .9 of peakmax
+#' @param wa calc "width @@" xx*extremum, needs 2 arguments, e.g. width when 0.2 of peakmax is reached to when peak falls to .9 of peakmax
 #' @param plot perform a barplot in the end?
 #' @param report write CTV report file (gives single traces with signal, bg ... marked and values in legend)
 #' @param ylim ylim for report plots, given as 2 value vector, e.g. c(-1,5) plots from -1 to
@@ -19,12 +19,7 @@
 #' @param fp numerical vector of length 4 giving positions for ctv.w for putative peak on and offset
 #'
 #' @author Daniel Münch <daniel@@muench.bio>
-#'
-#' @return
-#' @export
-#'
-#' @examples
-#'
+
 ctvs <- function(data.object, ctv.type, rec.frames=NA, bg.firstframe=NA, bg.lastframe=NA, sig.firstframe=NA, sig.lastframe=NA, wa = c(.2,.7), plot=F, report=F, ylim=NA, mfrow=c(4,3), suffix="", meanTraces=F, fp=c(29,37,41,49)) {
 
   #get data.object name

@@ -12,9 +12,7 @@
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
 #' @return plot
-#' @export
-#'
-#' @examples
+
 gloQplot <- function(data.object, ylim = NULL, mean = F, median = F, legend = F, ...) {
   #f1 <- which(names(data.object) == "data0")
   #fl <- length(data.object)

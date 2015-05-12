@@ -24,11 +24,7 @@
 #' @param ylim y limits for plots
 #'
 #' @author Daniel Münch <daniel@@muench.bio>
-#'
-#' @return
-#' @export
-#'
-#' @examples
+
 bleachCorrect <- function(data.object, rec.frames = NA, bleach.begin = 1, bleach.leaveout = NA, weight.BS = 8, weight.AS = 1, polcol = "#cccccc", mfrow = c(5,4), fixedA = NA, fixedB = NA, fixedC = NA, ref = "MOL", estimate.B = F, bleach.begin.ref =    NA, bleach.leaveout.ref = NA, weight.BS.ref = NA, weight.AS.ref = NA, diffParms4Ref = F, plot = T, ylim = NULL) {
 
   # get data.object name

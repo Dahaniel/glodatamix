@@ -12,11 +12,7 @@
 #' @param conc.from.odor read concentration from odorfield, assuming is is the last 2 digits -- !!!handle with even more care!!!
 #'
 #' @author Daniel Münch <daniel@@muench.bio>
-#'
-#' @return
-#' @export
-#'
-#' @examples
+
 findDuplicates <- function(data.object, case = "upper", molsingle = F, usualsuspects = T, conc0 = T, cut.odors = F, conc.from.bc = F, conc.from.odor = F) {
 
   # remove spaces

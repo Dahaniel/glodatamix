@@ -10,11 +10,7 @@
 #' @param shift subtract control responses from values?
 #'
 #' @author Daniel Münch <daniel@@muench.bio>
-#'
-#' @return
-#' @export
-#'
-#' @examples
+
 meanCTV <- function(data.object,test=F, nullref="MOL", plev=0.05, ctvcolumnname = "ctv", shift = F) {
 
   # select subset of data with ctv column of interest

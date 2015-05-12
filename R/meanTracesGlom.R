@@ -17,9 +17,7 @@
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
 #' @return list and PDF
-#' @export
-#'
-#' @examples
+
 meanTraces <- function( data.object, rec.frames = NA, st.shift = NA, ylim.lower = NA, ylim.upper = NA, add = "single", method = "mean", pdf = T,  mfrow = c(4,3), receptor = NA, return = TRUE) {
 
 # if rec.frame is not defined get it from first row of dataset
