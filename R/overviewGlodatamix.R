@@ -115,7 +115,7 @@ overviewGlodatamix <- function(	data.object, rec.frames = NA, ref = NA, mol = NA
     par(mfrow=mfrow)
 
     # convert stimulusframes into vector for polygon
-    if(is.na(stimulusframes)) stimulusframes <- c(data.object$NStim_on[1], data.object$NStim_off[1], data.object$Nstim2ON[1], data.object$Nstim2OFF[1])
+    if(is.na(stimulusframes[1])) stimulusframes <- c(data.object$NStim_on[1], data.object$NStim_off[1], data.object$Nstim2ON[1], data.object$Nstim2OFF[1])
 
     polygon.x <- rep(stimulusframes, each=2)
     polygon.y <- rep(c(ylim[1], ylim[2], ylim[2], ylim[1]), length(stimulusframes)/2)
