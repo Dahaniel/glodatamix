@@ -89,8 +89,8 @@ overviewGlodatamix <- function(	data.object, rec.frames = NA, ref = NA, mol = NA
   # calculate animal overviews
   for (i in 1:length(animals)) {
     animalx <- subset(data.object, Tanimal==animals[i])
-    recordings <- levels(as.factor(animalx$T_dbb1))
-    glomeruli <- levels(as.factor(animalx$NGloTag))
+    recordings <- animalx$T_dbb1
+    glomeruli <- levels(droplevels(as.factor(animalx$NGloTag)))
     color.glom <- rainbow(length(glomeruli))
     firstframex <- length(animalx) - rec.frames + 1
     lastframex <- length(animalx)
