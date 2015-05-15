@@ -89,7 +89,7 @@ overviewGlodatamix <- function(	data.object, rec.frames = NA, ref = NA, mol = NA
   # calculate animal overviews
   for (i in 1:length(animals)) {
     animalx <- subset(data.object, Tanimal==animals[i])
-    recordings <- levels(as.factor(animalx$NRealTime))
+    recordings <- levels(as.factor(animalx$T_dbb1))
     glomeruli <- levels(as.factor(animalx$NGloTag))
     color.glom <- rainbow(length(glomeruli))
     firstframex <- length(animalx) - rec.frames + 1
@@ -170,7 +170,7 @@ overviewGlodatamix <- function(	data.object, rec.frames = NA, ref = NA, mol = NA
     ### plot measurements:
     if (odorandglomwise == F && glomwise == F)  {
       for (k in 1:length(recordings)) {
-      recordingx <- subset(animalx, NRealTime==recordings[k])
+      recordingx <- subset(animalx, T_dbb1==recordings[k])
       plot(1:rec.frames,recordingx[1,firstframex:lastframex],type="n",main=paste(recordingx$TOdour[1],"(",recordingx$NOConc[1],"), ",recordingx$TPharma[1]), ylim=ylim, xlab="frames", ylab="response (deltaF/F)", col="red")
       polygon(y=polygon.y, x=polygon.x, density=-1, col=polcol, border=NA)
       for (l in 1:dim(recordingx)[1]) lines(1:rec.frames,recordingx[l,firstframex:lastframex],type="l", col=color.glom[l])
