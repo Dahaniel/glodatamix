@@ -31,6 +31,7 @@
 
 normalizeToReference <- function(data.object, rec.frames=NA, reference.odor,ctv.type,  bg.firstframe=NA, bg.lastframe=NA, sig.firstframe, sig.lastframe, pdf=T, mode="mean", rescale.data = F, ctvreport=F, glom=NA, suffix="", plot = T) {
 
+  require(plyr)
   #get data.object name
   data.object.name <- deparse(substitute(data.object))
   data.object.name <- gsub("[^a-zA-Z0-9 :._-]", "", data.object.name)
