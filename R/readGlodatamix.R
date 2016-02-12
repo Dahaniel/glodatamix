@@ -7,7 +7,9 @@
 #' @return concatenates all gloDatamix files from a location in one data.frame
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
-#' @examples data <- read.gdm("./80109-final_all/", header=F)
+#' @examples \dontrun{
+#' data <- read.gdm("./80109-final_all/", header=F)
+#' }
 read.gdm <- function(path,
                      header = TRUE,
                      input  = "gloDatamix" # gloDatamix for gloDatamix-files, "csv" for knime output
