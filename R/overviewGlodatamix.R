@@ -89,8 +89,8 @@ overviewGlodatamix <- function(	data.object, rec.frames = NA, ref = NA, mol = NA
   # calculate animal overviews
   for (i in 1:length(animals)) {
     animalx <- subset(data.object, Tanimal==animals[i])
-    recordings <- levels(as.factor(animalx$T_dbb1))
-    glomeruli <- levels(as.factor(animalx$NGloTag))
+    recordings <- animalx$T_dbb1
+    glomeruli <- levels(droplevels(as.factor(animalx$NGloTag)))
     color.glom <- rainbow(length(glomeruli))
     firstframex <- length(animalx) - rec.frames + 1
     lastframex <- length(animalx)
@@ -115,7 +115,7 @@ overviewGlodatamix <- function(	data.object, rec.frames = NA, ref = NA, mol = NA
     par(mfrow=mfrow)
 
     # convert stimulusframes into vector for polygon
-    if(is.na(stimulusframes)) stimulusframes <- c(data.object$NStim_on[1], data.object$NStim_off[1], data.object$Nstim2ON[1], data.object$Nstim2OFF[1])
+    if(is.na(stimulusframes[1])) stimulusframes <- c(data.object$NStim_on[1], data.object$NStim_off[1], data.object$Nstim2ON[1], data.object$Nstim2OFF[1])
 
     polygon.x <- rep(stimulusframes, each=2)
     polygon.y <- rep(c(ylim[1], ylim[2], ylim[2], ylim[1]), length(stimulusframes)/2)
