@@ -7,6 +7,7 @@
 #' @return concatenates all gloDatamix files from a location in one data.frame
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
+#' @export
 #' @examples \dontrun{
 #' data <- read.gdm("./80109-final_all/", header=F)
 #' }

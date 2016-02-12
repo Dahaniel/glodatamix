@@ -14,6 +14,8 @@
 #' @param receptor adds a column containing the receptor name provided here
 #' @param return return the results in the end or jus produce a pdf?
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
 #' @return list and PDF

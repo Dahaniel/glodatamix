@@ -11,6 +11,8 @@
 #' @param conc.from.bc read concentration from barcode -- !!handle with care!!
 #' @param conc.from.odor read concentration from odorfield, assuming is is the last 2 digits -- !!!handle with even more care!!!
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 
 findDuplicates <- function(data.object, case = "upper", molsingle = F, usualsuspects = T, conc0 = T, cut.odors = F, conc.from.bc = F, conc.from.odor = F) {

@@ -5,6 +5,8 @@ Version: 0.3
 Date: 2015-05-12
 Author: Daniel Münch
 Maintainer: <daniel@muench.bio>
-Description: This package provides basic functions to analyze data from the Galizia lab (.gloDataMix)
+Description: This package provides basic functions to analyze data from the
+    Galizia lab (.gloDataMix)
 License: MIT
 LazyData: TRUE
+RoxygenNote: 5.0.1

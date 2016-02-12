@@ -18,6 +18,8 @@
 #' @param meanTraces does data come from meanTraces.R?
 #' @param fp numerical vector of length 4 giving positions for ctv.w for putative peak on and offset
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 
 ctvs <- function(data.object, ctv.type, rec.frames=NA, bg.firstframe=NA, bg.lastframe=NA, sig.firstframe=NA, sig.lastframe=NA, wa = c(.2,.7), plot=F, report=F, ylim=NA, mfrow=c(4,3), suffix="", meanTraces=F, fp=c(29,37,41,49)) {

@@ -9,7 +9,7 @@
 #' @param weight.BS how to weight the part before the stimulus
 #' @param weight.AS how to weight the part after the stimulus
 #' @param polcol color of the weight polygon
-#' @param mfrow
+#' @param mfrow numeric of length 2, number of rows and columns of plots for PDF output
 #' @param fixedA fixed value for tparameter A
 #' @param fixedB fixed value for tparameter B
 #' @param fixedC fixed value for tparameter C
@@ -22,6 +22,8 @@
 #' @param diffParms4Ref define different fitting parameters for the reference (MOL)
 #' @param plot plot?
 #' @param ylim y limits for plots
+#'
+#' @export
 #'
 #' @author Daniel Münch <daniel@@muench.bio>
 

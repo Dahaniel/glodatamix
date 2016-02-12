@@ -27,6 +27,8 @@
 #' B-4. do ctv for measurements \cr
 #' B-5. divide every ctv through corresponding point on fitted curve \cr
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 
 normalizeToReference <- function(data.object, rec.frames=NA, reference.odor,ctv.type,  bg.firstframe=NA, bg.lastframe=NA, sig.firstframe, sig.lastframe, pdf=T, mode="mean", rescale.data = F, ctvreport=F, glom=NA, suffix="", plot = T) {

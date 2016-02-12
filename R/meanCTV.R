@@ -9,6 +9,8 @@
 #' @param ctvcolumnname name of the ctv containing column
 #' @param shift subtract control responses from values?
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 
 meanCTV <- function(data.object,test=F, nullref="MOL", plev=0.05, ctvcolumnname = "ctv", shift = F) {

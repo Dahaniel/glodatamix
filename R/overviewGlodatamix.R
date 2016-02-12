@@ -16,6 +16,8 @@
 #' @param polcol color of the stimulus polygon
 #' @param suffix suffic for filenames
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
 ###########################################################

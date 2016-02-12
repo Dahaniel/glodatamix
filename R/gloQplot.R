@@ -9,6 +9,8 @@
 #' @param legend plot a legend?
 #' @param ... pass additional parameters to the plot() function
 #'
+#' @export
+#'
 #' @author Daniel Münch <daniel@@muench.bio>
 #'
 #' @return plot
