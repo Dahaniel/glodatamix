@@ -27,7 +27,25 @@
 #'
 #' @author Daniel Münch <daniel@@muench.bio>
 
-bleachCorrect <- function(data.object, rec.frames = NA, bleach.begin = 1, bleach.leaveout = NA, weight.BS = 8, weight.AS = 1, polcol = "#cccccc", mfrow = c(5,4), fixedA = NA, fixedB = NA, fixedC = NA, ref = "MOL", estimate.B = F, bleach.begin.ref =    NA, bleach.leaveout.ref = NA, weight.BS.ref = NA, weight.AS.ref = NA, diffParms4Ref = F, plot = T, ylim = NULL) {
+bleachCorrect <- function(data.object, rec.frames = NA, 
+                          bleach.begin = 1, 
+                          bleach.leaveout = NA, 
+                          weight.BS = 8, 
+                          weight.AS = 1, 
+                          polcol = "#cccccc", 
+                          mfrow = c(5,4), 
+                          fixedA = NA, 
+                          fixedB = NA, 
+                          fixedC = NA, 
+                          ref = "MOL", 
+                          estimate.B = F, 
+                          bleach.begin.ref =    NA, 
+                          bleach.leaveout.ref = NA, 
+                          weight.BS.ref = NA, 
+                          weight.AS.ref = NA, 
+                          diffParms4Ref = F, 
+                          plot = T, 
+                          ylim = NULL) {
 
   # get data.object name
   data.object.name <- deparse(substitute(data.object))
@@ -109,7 +127,7 @@ bleachCorrect <- function(data.object, rec.frames = NA, bleach.begin = 1, bleach
         droplevels(subset(animalx, NGloTag == animalx.glomeruli[g]))
       if (estimate.B == T){
         animalx.gx.ref <- droplevels(subset(animalx.gx, TOdour == ref))
-        ref.median <-apply(animalx.gx.ref[,(length(animalx.gx.ref) - rec.frames + 1):length(animalx.gx.ref)],2,median)
+        ref.median <- apply(subset(animalx.gx.ref, select = (data0:get(paste("data",rec.frames - 1,sep = "")))), 2, median)
         min.ref <- min(ref.median)
         max.ref <- max(ref.median)
         ref.median <- as.numeric(ref.median)
